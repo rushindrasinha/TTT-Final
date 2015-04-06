@@ -1,0 +1,121 @@
+<!--======================================================================================RS
+This is Tic Tac Toe [An interactive Multiplayer Game hosted through Firebase] by Rushi Sinha
+RS=======================================================================================-->
+
+<!DOCTYPE html>
+<html ng-app="ttt">
+<head>
+
+<!--RS========== Below are the Animate.css and Style.css Stylesheets  ==========-->
+
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+<!--RS========== Below are Angular / Firebase / AngularFire / App / Controller Scripts  ==========-->
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/controller.js"></script>
+
+
+<!--RS========== Title of the Page  ==========-->
+
+	<title>Tic Tac Toe</title>
+
+</head>
+<!--RS========== Body Begins  ==========-->
+
+<body ng-controller="TttController as tcon">
+	<h1><span id='alliance'>Alliance </span>|| A-Tac ||<span id='horde'> Horde</span></h1>
+
+
+
+	<div class='left-box'>
+		<div class="score-left"><img src="assets/alliMain.png">Alliance Wins : <span id='AllianceScore'>{{tcon.syncWithFirebase.allianceScore}}</span></div>
+
+		<div class="score-right"><img src="assets/hordeMain.png">Horde Wins : <span id='HordeScore'>{{tcon.syncWithFirebase.hordeScore}}</span></div>
+
+		<div class='playMove'>
+		<br><br><br><br>
+		<button ng-click='tcon.playAgain()' class='myButton'>Play Again</button>
+		</div>
+
+		<video autoplay id="bgvid">
+		<source src="assets/wow.mp4" type="video/mp4">
+		</video>
+		<br><br>
+		<div id='victory'>
+
+		</div>
+
+	</div>
+
+	<!--RS========== Chat Room Div  ==========-->
+
+	<div class='right-box'>
+		<div id='chat-space' overflow-y: scroll>
+			<ul>
+				<li class='chat-log' ng-repeat='todo in tcon.chatLog'>
+					{{todo.chat}}
+				</li>
+			</ul>
+
+		</div>
+	<form ng-submit='tcon.chatter()'>
+		<input id='chat-box' type='text' placeholder='Chat With Your Opponent....' ng-model='tcon.text'>
+		<input type='submit' id='btn' value='Send'>
+	</form>
+
+	</div> <!--RS========== End of ChatRoom Div  ==========-->
+
+
+
+
+<div id="container">
+
+
+<!--RS========== The Game Grid is Defined using ng-repeat in the Div Below  ==========-->
+
+
+	<div id='square-container'>
+
+
+
+		<div class="animated slots" ng-repeat="slot in tcon.syncWithFirebase.slots" ng-click="tcon.makeMove(slot)" ng-class='{slots: tcon.number, alli: slot.allianceSlot, horde: slot.hordeSlot, ready: tcon.videoDone }' >
+
+
+
+		</div> <!-- End of slots div with ng-repeat -->
+	</div> <!-- End of Square Container Grid -->
+	
+
+	<br>
+	<br>
+	<br>
+
+<!--RS========== Below is the Div to Line-Up and Contain the Online Radio Embed Code  ==========-->
+
+	<div class="lineUp">
+		<br>
+		<br>
+		<br><br>
+		<br>
+		<br><br>
+		<div class='radio'>
+			<iframe src="http://tunein.com/embed/player/s49632/" style="width:500px;height:100px;" scrolling="no" frameborder="no"></iframe>
+		</div>
+	</div>
+	<br>
+</div> <!-- end container div -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+/*==========================RS
+Custom CSS Page by Rushi Sinha
+RS==========================*/
+
+
+
+
+/*====================RS
+General CSS For the Page
+RS====================*/
+
+body {
+	margin: 0 auto;
+	width: 100%;
+	background: black url("../assets/bgwow.jpg") fixed;
+	color: white;
+}
+
+video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background-size: cover;
+}
+
+
+a {
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+h1 {
+	font-size: 54px;
+	text-align: center;
+	color: white;
+}
+
+
+/*======================================RS
+ID Specific CSS for Rules Text Show / Hide
+RS======================================*/
+
+.horde {
+	background-image: url('../assets/hordeMain.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+
+.alli {
+	background-image: url('../assets/alliMain.png');
+	background-repeat: no-repeat;
+	background-position: center; 
+}
+
+
+
+#alliance {
+	color: #64B5F6;
+}
+
+#horde {
+	color: red;
+}
+
+.left-box {
+	float: left;
+	width: 30%;
+	height: 500px;
+	margin-left: 0px;
+}
+
+.right-box {
+	float: right;
+	width: 30%;
+	height: 500px;
+	margin-right: 0px;
+}
+
+#chat-space {
+	width: 100%;
+	height: 367px;
+	overflow-y: scroll;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+::-webkit-input-placeholder {
+   color: black;
+}
+
+
+ul li:before{ content:"-"; position:relative; left:-5px;}
+ul li{ text-indent:-5px; }
+
+.chat-log {
+	list-style-type: none;
+}
+
+
+#chat-box {
+	font-weight: bold;
+	width: 75%;
+	height: 115px;
+	margin: 2px;
+	text-align: center;
+	border: 6px solid black;
+	outline: none;
+	font-size: 16px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#btn {
+	font-weight: bold;
+	color: black;
+ 	width: 20%;
+ 	height: 115px;
+ 	border: 1px solid black;
+ 	margin: 0 auto;
+ 	outline: none;
+ 	background-color: white;
+ 	font-size: 16px;
+}
+
+#btn:hover {
+	background-color: black;
+	color: white;
+}
+
+
+
+/*=====================RS
+CSS for the Container Div
+RS=====================*/
+
+
+#square-container {
+	margin: 0 auto;
+	width: 464px;
+	height: 456px;
+}
+
+
+/*===================RS
+Styling for the Squares
+RS===================*/
+
+.slots {
+	text-align: center;
+	/*display: inline-block;*/
+	display: none;
+	width: 150px;
+	height: 150px;
+	border: 1px solid #64FFDA;
+	margin: 0 auto;
+/*	background-color: transparent;
+	vertical-align: top;*/
+	font-size: 170px;
+	font-weight: bold;
+	color: #64FFDA;
+}
+
+.ready {
+	display: inline-block;
+}
+
+/*=========RS
+Score Styling
+RS=========*/
+.score-left {
+	margin: 10px;
+	display: inline;
+	font-size: 17px;
+}
+
+
+
+.score-right {
+	margin: 50px;
+	display: inline;
+	font-size: 17px;
+}
+
+.lineUp {
+	width: 420px;
+	font-weight: bold;
+	font-size: 28px;
+	color: #A5D6A7;
+	margin: 10px;
+	text-align: center;
+	display: inline;
+}
+
+#HordeScore {
+	color: #E64A19 ;
+}
+
+#AllianceScore {
+	color: #E64A19;
+}
+
+
+#victory {
+	height: 300px;
+	width: 700px;
+	margin-left: 10px;
+	text-align: center;
+
+}
+
+.myButton {
+	background-color:#992323;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:28px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	outline: none;
+}
+.myButton:hover {
+	background-color:#f50000;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.playMove {
+	text-align: center;
+}
+
+#playAgain {
+	width: 75px;
+	height: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+
+
+
+/*======RS
+End of CSS
+RS======*/
